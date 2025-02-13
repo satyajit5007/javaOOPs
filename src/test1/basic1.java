@@ -5,12 +5,13 @@ class Pen{
     String type;
 
      public void write(){
-         System.out.println("Writing things type-> " + color +" "+ type);
+
      }
 
      //argument passing constructor
      Pen(String color, String type){
          System.out.println(color+ type);
+         System.out.println("Writing things type-> " + color +" "+ type);
      }
 }
 
