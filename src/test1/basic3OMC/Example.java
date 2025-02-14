@@ -1,22 +1,20 @@
 package test1.basic3OMC;
 
-class Singleton{
+class Singleton {
+    private static Singleton instance; // 1️⃣ Private static variable
 
-    private static Singleton instance;
-
-    private Singleton(){
-        System.out.println("Singleton Instance created");
-
+    private Singleton() { // 2️⃣ Private Constructor
+        System.out.println("Singleton Instance Created");
     }
 
-    public static Singleton getInstance(){
-        if (instance == null){
-            instance =new Singleton();
+    public static Singleton getInstance() { // 3️⃣ Public static method
+        if (instance == null) { // Check if instance exists
+            instance = new Singleton(); // Create new instance if not exists
         }
-        return instance;
+        return instance; // Return existing instance
     }
-
 }
+
 public class Example {
 
     int X;
